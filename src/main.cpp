@@ -1,14 +1,12 @@
 #include <QApplication>
-#include <QWidget>
+#include "MainWindow.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
     QApplication app(argc, argv);
 
-    // Создаем виджет (окно)
-    QWidget window;
-    window.resize(400, 300); // Устанавливаем размер окна
-    window.setWindowTitle("Простое окно на Qt"); // Устанавливаем заголовок окна
-    window.show(); // Показываем окно
+    MainWindow mainWindow;
+    mainWindow.show(); // Отображение главного окна
 
-    return app.exec(); // Запускаем главный цикл приложения
+    return app.exec(); // Запуск цикла обработки событий
 }
